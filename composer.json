@@ -19,22 +19,17 @@
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
 
-        "symfony/bootcamp-bundle": "1.0.1",
+        "symfony/bootcamp-bundle": "1.0.2",
         "brianium/habitat": "v1.0.0",
         "doctrine/migrations": "dev-master",
         "doctrine/doctrine-migrations-bundle": "dev-master",
 
         "netgusto/autoroute-bundle": "1.0.1",
         "netgusto/devserver-bundle": "1.2.0",
-        "netgusto/deviation-bundle": "1.0.0",
         "netgusto/parametertouch-bundle": "1.0.1",
-
-        "leafo/lessphp": "~0.4.0",
-        "twbs/bootstrap": "v3.2.0",
 
         "knplabs/knp-menu-bundle": "dev-master",
         "sabre/dav": "2.0.5",
-        "webasset/jquery-minicolors": "2.1.6",
 
         "nelmio/cors-bundle": "~1.3.2",
         "friendsofsymfony/rest-bundle": "~1.4.2",
@@ -47,19 +42,6 @@
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "webasset/jquery-minicolors",
-                "version": "2.1.6",
-                "dist": {
-                    "url": "https://github.com/claviska/jquery-minicolors/archive/2.1.6.zip",
-                    "type": "zip"
-                }
-            }
-        }
-    ],
     "scripts": {
         "post-root-package-install": [
             "SymfonyStandard\\Composer::hookRootPackageInstall"
@@ -71,7 +53,6 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
-            "Netgusto\\DeviationBundle\\Composer\\ScriptHandler::forwardAssetsToWebDir",
             "Symfony\\BootCampBundle\\Composer\\ScriptHandler::install"
         ],
         "post-update-cmd": [
@@ -80,8 +61,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
-            "Netgusto\\DeviationBundle\\Composer\\ScriptHandler::forwardAssetsToWebDir"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
         ]
     },
     "config": {
@@ -102,11 +82,6 @@
                 "src": "app/config/defaults/data.environment.dist.yml",
                 "dest": "data/environment.yml"
             }
-        ],
-        "assetsforwarding": {
-            "packages": [
-                "webasset/jquery-minicolors"
-            ]
-        }
+        ]
     }
 }

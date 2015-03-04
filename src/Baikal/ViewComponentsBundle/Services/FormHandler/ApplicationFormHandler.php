@@ -36,8 +36,8 @@ class ApplicationFormHandler {
         $form->handleRequest($request);
 
         if($form->isValid()) {
-            $this->em->persist($app);
-            $this->em->flush();
+            #$this->em->persist($app);
+            #$this->em->flush();
 
             return $onSuccess($form, $app, $new);
         }

@@ -26,14 +26,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        /*copy: {
-            images: {
-                expand: true,
-                cwd: 'src/KP/LearningBundle/Resources/public/images',
-                src: '*',
-                dest: 'web/assets/images/'
-            }
-        },*/
         concat: {
             options: {
                 stripBanners: true
@@ -49,8 +41,7 @@ module.exports = function (grunt) {
                 src : [
                     'web/assets/js/jquery.js',
                     'web/assets/js/jquery.minicolors.min.js',
-                    'web/assets/js/bootstrap.js'/*,
-                    'src/KP/LearningBundle/Resources/public/js/*.js'*/
+                    'web/assets/js/bootstrap.js'
                 ],
                 dest: 'web/assets/js/bundled.js'
             }

@@ -89,7 +89,7 @@ security:
             #
             # TODO: http://stackoverflow.com/questions/10089816/symfony2-how-to-check-if-an-action-is-secured
             #
-            entry_point: baikal_frontend.oauth_preloginredirect_formauthenticationentrypoint
+            # entry_point: baikal_frontend.oauth_preloginredirect_formauthenticationentrypoint
 
             form_login:
                 use_forward: false

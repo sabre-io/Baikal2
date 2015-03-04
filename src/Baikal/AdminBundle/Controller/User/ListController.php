@@ -18,11 +18,11 @@ class ListController extends Controller
 
     public function deleteAction(User $user)
     {
-        $em = $this->getDoctrine()->getManager();
-        $em->remove($user);
-        $em->flush();
+        #$em = $this->getDoctrine()->getManager();
+        #$em->remove($user);
+        #$em->flush();
         
-        $this->get('session')->getFlashBag()->add('notice', 'User <i class="fa fa-user"></i> <strong>' . htmlspecialchars($user->getUsername()) . '</strong> has been deleted.');
+        $this->get('session')->getFlashBag()->add('notice', 'User <i class="fa fa-user"></i> <strong>' . htmlspecialchars($user->getUsername()) . '</strong> has been deleted (well not really, this is a demo).');
         return $this->redirect($this->generateUrl('baikal_admin_user_list'));
     }
 }

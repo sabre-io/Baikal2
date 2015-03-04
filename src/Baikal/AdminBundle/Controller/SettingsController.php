@@ -30,7 +30,7 @@ class SettingsController extends Controller
         $form->handleRequest($request);
 
         if($form->isValid()) {
-
+            /*
             $data = $form->getData();
 
             # Persisting settings
@@ -38,6 +38,7 @@ class SettingsController extends Controller
             $config->setEnable_caldav($data['enable_caldav']);
             $config->setEnable_carddav($data['enable_carddav']);
             $config->setEnable_versioncheck($data['enable_versioncheck']);
+            */
 
             $this->get('session')->getFlashBag()->add('notice', '<i class="fa fa-cogs"></i> Settings have been updated.');
             return $this->redirect($this->generateUrl('baikal_admin_settings'));

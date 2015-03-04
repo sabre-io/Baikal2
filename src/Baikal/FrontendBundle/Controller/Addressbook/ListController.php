@@ -33,11 +33,11 @@ class ListController extends Controller {
 
     public function deleteAction(Entity\Addressbook $addressbook) {
 
-        $em = $this->getDoctrine()->getManager();
-        $em->remove($addressbook);
-        $em->flush();
+        #$em = $this->getDoctrine()->getManager();
+        #$em->remove($addressbook);
+        #$em->flush();
         
-        $this->get('session')->getFlashBag()->add('notice', 'Addressbook <i class="fa fa-book"></i> <strong>' . htmlspecialchars($addressbook->getDisplayname()) . '</strong> has been deleted.');
+        $this->get('session')->getFlashBag()->add('notice', 'Addressbook <i class="fa fa-book"></i> <strong>' . htmlspecialchars($addressbook->getDisplayname()) . '</strong> has been deleted (well not really, this is a demo).');
         return $this->redirect($this->generateUrl('baikal_frontend_addressbook_list'));
     }
 }

@@ -40,7 +40,7 @@ class FormController extends Controller {
         $that = $this;
 
         return function($form, Addressbook $addressbook, $isNew) use($user, $that) {
-            $that->get('session')->getFlashBag()->add('notice', 'Addressbook <i class="fa fa-book"></i> <strong>' . htmlspecialchars($addressbook->getDisplayname()) . '</strong> has been ' . ($isNew ? 'created' : 'updated') . '.');
+            $that->get('session')->getFlashBag()->add('notice', 'Addressbook <i class="fa fa-book"></i> <strong>' . htmlspecialchars($addressbook->getDisplayname()) . '</strong> has been ' . ($isNew ? 'created' : 'updated') . ' (well not really, this is a demo).');
             return $that->redirect($that->generateUrl('baikal_frontend_addressbook_list'));
         };
     }

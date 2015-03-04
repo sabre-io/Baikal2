@@ -40,8 +40,8 @@ class AddressbookFormHandler {
         $form->handleRequest($request);
 
         if($form->isValid()) {
-            $this->em->persist($addressbook);
-            $this->em->flush();
+            #$this->em->persist($addressbook);
+            #$this->em->flush();
 
             return $onSuccess($form, $addressbook, $new);
         }

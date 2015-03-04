@@ -39,8 +39,8 @@ class CalendarFormHandler {
         $form->handleRequest($request);
 
         if($form->isValid()) {
-            $this->em->persist($calendar);
-            $this->em->flush();
+            #$this->em->persist($calendar);
+            #$this->em->flush();
 
             return $onSuccess($form, $calendar, $new);
         }

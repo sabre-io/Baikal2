@@ -40,7 +40,7 @@ class FormController extends Controller {
         $that = $this;
 
         return function($form, Calendar $calendar, $isNew) use($user, $that) {
-            $that->get('session')->getFlashBag()->add('notice', 'Calendar <i class="fa fa-calendar"></i> <strong>' . htmlspecialchars($calendar->getDisplayname()) . '</strong> has been ' . ($isNew ? 'created' : 'updated') . '.');
+            $that->get('session')->getFlashBag()->add('notice', 'Calendar <i class="fa fa-calendar"></i> <strong>' . htmlspecialchars($calendar->getDisplayname()) . '</strong> has been ' . ($isNew ? 'created' : 'updated') . ' (well not really, this is a demo).');
             return $that->redirect($that->generateUrl('baikal_frontend_calendar_list'));
         };
     }

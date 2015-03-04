@@ -20,7 +20,7 @@ class FormController extends Controller
         $form->handleRequest($request);
 
         if($form->isValid()) {
-            $data = $form->getData();
+            /*$data = $form->getData();
             $em = $this->getDoctrine()->getManager();
 
             # Persisting identity principal
@@ -56,7 +56,8 @@ class FormController extends Controller
             $em->persist($metadata);
 
             $em->flush();
-            $this->get('session')->getFlashBag()->add('notice', 'User <i class="fa fa-user"></i> <strong>' . htmlspecialchars($user->getUsername()) . '</strong> has been created.');
+            */
+            $this->get('session')->getFlashBag()->add('notice', 'User <i class="fa fa-user"></i> <strong>' . htmlspecialchars($user->getUsername()) . '</strong> has been created (well not really, this is a demo).');
             return $this->redirect($this->generateUrl('baikal_admin_user_list'));
         }
 
@@ -110,7 +111,7 @@ class FormController extends Controller
             $em->persist($user);
             $em->flush();
 
-            $this->get('session')->getFlashBag()->add('notice', 'User <i class="fa fa-user"></i> <strong>' . htmlspecialchars($user->getUsername()) . '</strong> has been updated.');
+            $this->get('session')->getFlashBag()->add('notice', 'User <i class="fa fa-user"></i> <strong>' . htmlspecialchars($user->getUsername()) . '</strong> has been updated (well not really, this is a demo).');
             return $this->redirect($this->generateUrl('baikal_admin_user_list'));
         }
 

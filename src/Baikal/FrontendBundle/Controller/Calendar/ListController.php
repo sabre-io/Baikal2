@@ -36,11 +36,11 @@ class ListController extends Controller {
 
     public function deleteAction(Calendar $calendar) {
 
-        $em = $this->getDoctrine()->getManager();
-        $em->remove($calendar);
-        $em->flush();
+        #$em = $this->getDoctrine()->getManager();
+        #$em->remove($calendar);
+        #$em->flush();
         
-        $this->get('session')->getFlashBag()->add('notice', 'Calendar <i class="fa fa-calendar"></i> <strong>' . htmlspecialchars($calendar->getDisplayname()) . '</strong> has been deleted.');
+        $this->get('session')->getFlashBag()->add('notice', 'Calendar <i class="fa fa-calendar"></i> <strong>' . htmlspecialchars($calendar->getDisplayname()) . '</strong> has been deleted (well not really, this is a demo).');
         return $this->redirect($this->generateUrl('baikal_frontend_calendar_list'));
     }
 }
