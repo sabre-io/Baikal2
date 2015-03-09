@@ -26,6 +26,14 @@ module.exports = function (grunt) {
                 }
             }
         },
+        copy: {
+            images: {
+                expand: true,
+                cwd: 'src/Baikal/ViewComponentsBundle/Resources/public/img',
+                src: '*',
+                dest: 'web/assets/images/'
+            }
+        },
         concat: {
             options: {
                 stripBanners: true
@@ -67,5 +75,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['bowercopy', /*'copy',*/ 'concat', 'cssmin', 'uglify']);
+    grunt.registerTask('default', ['bowercopy', 'copy', 'concat', 'cssmin', 'uglify']);
 };
