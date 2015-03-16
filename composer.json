@@ -1,6 +1,6 @@
 {
     "name": "netgusto/baikal",
-    "version": "2.0.0-alpha2",
+    "version": "2.0.0-alpha3",
     "license": "MIT",
     "type": "project",
     "description": "Baïkal Server 2",
@@ -28,7 +28,6 @@
         "doctrine/doctrine-migrations-bundle": "dev-master",
 
         "netgusto/autoroute-bundle": "~1.0",
-        "netgusto/devserver-bundle": "~1.2",
         "netgusto/parametertouch-bundle": "~1.0",
 
         "knplabs/knp-menu-bundle": "dev-master",

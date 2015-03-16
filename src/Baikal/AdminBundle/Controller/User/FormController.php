@@ -6,9 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller,
     Symfony\Component\HttpFoundation\Request,
     Symfony\Component\HttpFoundation\Response;
 
-use Baikal\ModelBundle\Entity\User,
+use Baikal\SystemBundle\Entity\User,
     Baikal\ModelBundle\Entity\UserPrincipal,
-    Baikal\ModelBundle\Entity\UserMetadata,
     Baikal\ModelBundle\Form\Type as FormType;
 
 class FormController extends Controller
@@ -43,17 +42,11 @@ class FormController extends Controller
                     )
             );
 
-            $em->persist($user);
-
-            # Persisting user metadata
-            $metadata = new UserMetadata();
-            $metadata->setUser($user);
-
             foreach($data['roles'] as $role) {
-                $metadata->addRole($role);
+                $user->addRole($role);
             }
 
-            $em->persist($metadata);
+            $em->persist($user);
 
             $em->flush();
             */
